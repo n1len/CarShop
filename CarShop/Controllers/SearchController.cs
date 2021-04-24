@@ -23,5 +23,13 @@ namespace CarShop.Controllers
 
             return View(cars);
         }
+
+        public IActionResult AdvancedSearch(string brand, string model, uint yearMin, uint yearMax,
+            uint mileageMax, decimal priceMin, decimal priceMax,string bodyType, string engineType, double engineVolumeMin, double engineVolumeMax)
+        {
+            var cars = SearchCarViewModel.AdvancedSearch(brand, model, yearMin, yearMax, mileageMax, priceMin, priceMax,bodyType, engineType, engineVolumeMin, engineVolumeMax);
+
+            return View(cars);
+        }
     }
 }

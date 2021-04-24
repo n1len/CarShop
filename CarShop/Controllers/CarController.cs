@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using CarShop.Data;
 using CarShop.Infrastructure;
+using CarShop.Infrastructure.Interfaces;
+using CarShop.Infrastructure.Models;
 using CarShop.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,68 +16,32 @@ namespace CarShop.Controllers
     {
         private readonly ICarRepository carRepository;
 
-        private readonly ICategoryRepository categoryRepository;
-
         private readonly AppDBContent appDbContent;
 
-        public CarController(ICarRepository carRepository, ICategoryRepository categoryRepository,AppDBContent appDbContent)
+        public CarController(ICarRepository carRepository,AppDBContent appDbContent)
         {
-            this.categoryRepository = categoryRepository;
             this.carRepository = carRepository;
             this.appDbContent = appDbContent;
         }
 
-        public ViewResult Electro()
+        public ViewResult ShowPopularBrand()
         {
-            IEnumerable<Car> cars = null;
-
-            cars = carRepository.Cars.Where(i => i.Category.CategoryName.Equals("Электромобили"))
-                .OrderBy(i => i.Id);
-            string currentCategory = "Электромобили";
-
-            var car = new CarViewModel
-            {
-                GetAllCars = cars,
-                CurrentCategory = currentCategory
-            };
-
-            return View(car);
+            return View();
         }
 
-        public ViewResult Fuel()
+        public ViewResult ShowByBodyType()
         {
-            IEnumerable<Car> cars = null;
-
-            cars = carRepository.Cars.Where(i => i.Category.CategoryName.Equals("Машины на дизеле/бензине") || 
-                                                 i.Category.CategoryName.Equals("Машины на дизеле") ||
-                                                     i.Category.CategoryName.Equals("Машины на бензине"))
-                .OrderBy(i => i.Id);
-            string currentCategory = "Машины на дизеле/бензине";
-
-            var car = new CarViewModel
-            {
-                GetAllCars = cars,
-                CurrentCategory = currentCategory
-            };
-
-            return View(car);
+            return View();
         }
 
         public ViewResult Index(string category)
         {
-            string _category = category;
             IEnumerable<Car> cars = null;
-            string currentCategory = "";
-
-            if (string.IsNullOrEmpty(category))
-            {
-                cars = carRepository.Cars.OrderBy(i => i.Id);
-            }
+            cars = carRepository.Cars;
 
             var car = new CarViewModel
             {
-                GetAllCars = cars,
-                CurrentCategory = currentCategory
+                GetAllCars = cars
             };
 
             return View(car);
@@ -88,52 +54,38 @@ namespace CarShop.Controllers
             return View(cars);
         }
 
-        public IActionResult Delete(int id)
+        public IActionResult GetCarsByBrand(string brand)
         {
-            DbObjects.Delete(appDbContent, id);
+            ViewBag.Title = brand;
 
-            return View();
-        }
-
-        public IActionResult Add()
-        {
-            DbObjects.Add(appDbContent);
-
-            return View();
-        }
-
-        public ViewResult Petrol()
-        {
             IEnumerable<Car> cars = null;
 
-            cars = carRepository.Cars.Where(i => i.Category.CategoryName.Equals("Машины на бензине"))
+            cars = carRepository.Cars.Where(i => i.Brand.Equals(brand))
                 .OrderBy(i => i.Id);
-            string currentCategory = "Машины на бензине";
 
             var car = new CarViewModel
             {
-                GetAllCars = cars,
-                CurrentCategory = currentCategory
+                GetAllCars = cars
             };
 
-            return View(car);
+            return View("ShowPopularBrand", car);
         }
 
-        public ViewResult Diesel()
+        public IActionResult GetCarsByBodyType(string bodyType)
         {
+            ViewBag.Title = bodyType;
+
             IEnumerable<Car> cars = null;
 
-            cars = carRepository.Cars.Where(i => i.Category.CategoryName.Equals("Машины на дизеле"))
+            cars = carRepository.Cars.Where(i => i.BodyType.Equals(bodyType))
                 .OrderBy(i => i.Id);
-            string currentCategory = "Машины на дизеле";
 
             var car = new CarViewModel
             {
-                GetAllCars = cars,
-                CurrentCategory = currentCategory
+                GetAllCars = cars
             };
 
-            return View(car);
+            return View("ShowByBodyType",car);
         }
     }
 }

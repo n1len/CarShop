@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CarShop.Infrastructure;
+using CarShop.Infrastructure.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,83 +11,49 @@ namespace CarShop.Data
 {
     public class DbObjects
     {
-        private static Dictionary<string, Category> categoriesDictionary;
-
-        public static void Initial(AppDBContent content)
+        public static void Delete(AppDBContent context, int Id)
         {
+            var car = context.Cars.Where(c => c.Id == Id).FirstOrDefault();
 
-            if (!content.Categories.Any())
-                content.Categories.AddRange(Categories.Select(c => c.Value));
+            context.Cars.Remove(car!);
 
-            if (!content.Cars.Any())
-                content.AddRange(
-                    new Car
-                        {
-                            Brand = "Mercedes-Bens",
-                            Model = "GLC",
-                            Description = "Современный авто",
-                            IsFavorite = false,
-                            Price = 30436000m,
-                            Category = Categories["Машины на бензине"]
-                        }
-                );
-
-            content.SaveChanges();
+            context.SaveChanges();
         }
 
-        public static void Delete(AppDBContent content, int intId)
+        public static void Add(AppDBContent context,Car car)
         {
-            var car = content.Cars.Where(c => c.Id == intId).FirstOrDefault();
-
-            content.Cars.Remove(car!);
-
-            content.SaveChanges();
-        }
-
-        public static void Add(AppDBContent content)
-        {
-            content.AddRange(
-                new Car
-                {
-                    Brand = "Mercedes-Bens",
-                    Model = "CLS",
-                    Description = "Современный авто",
-                    IsFavorite = true,
-                    Price = 1436000m,
-                    Category = Categories["Машины на бензине"]
-                }
-            );
-
-            content.SaveChanges();
-        }
-
-        public static Dictionary<string, Category> Categories
-        {
-            get
+            context.AddAsync(new Car
             {
-                if (categoriesDictionary == null)
-                {
-                    var list = new Category[]
-                    {
-                        new Category
-                        {
-                            CategoryName = "Машины на бензине",
-                            Description = "Машины с двигателем внутреннего сгорания"
-                        },
-                        new Category
-                        {
-                            CategoryName = "Машины на дизеле",
-                            Description = "Машины с двигателем внутреннего сгорания"
-                        },
-                    };
-                    categoriesDictionary = new Dictionary<string, Category>();
+                Brand = car?.Brand,
+                Model = car?.Model,
+                Description = car?.Description,
+                Mileage = car.Mileage,
+                Color = car?.Color,
+                Year = car.Year,
+                EngineVolume = car.EngineVolume,
+                EngineType = car?.EngineType,
+                BodyType = car?.BodyType,
+                GearBox = car?.GearBox,
+                DriveUnit = car?.DriveUnit,
+                Price = car.Price
+            });
 
-                    foreach (var category in list)
-                        categoriesDictionary.Add(category.CategoryName,category);
-                }
+            context.SaveChanges();
+        }
 
-                return categoriesDictionary;
-            }
+        public static void DeleteOrder(AppDBContent context, int Id)
+        {
+            var order = context.Orders.Where(c => c.Id == Id).FirstOrDefault();
+
+            var orderDetail = context.OrderDetails.Where(c => c.OrderId == Id).FirstOrDefault();
+
+            context.OrderDetails.Remove(orderDetail!);
+
+            context.SaveChanges();
+
+            context.Orders.Remove(order!);
+
+            context.SaveChanges();
         }
     }
 }

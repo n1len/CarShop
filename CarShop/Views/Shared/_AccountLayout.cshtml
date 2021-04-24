@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand text-danger" asp-area="" asp-controller="Home" asp-action="Index"><b><i>CarShop</i></b></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex">
+                    <form class="form-inline mt-2 mt-md-0" action="@Url.Action("Index", "Search")" method="get">
+                        <input class="form-control mr-sm-4" type="search" name="query" placeholder="Марка/модель" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Показать авто</button>
+                    </form>
+                </div>
+                <div>
+                    <ul class="navbar-nav flex-grow-1 text-right">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            @if (User.Identity.Name == "admin")
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-danger" asp-area="" asp-controller="Admin" asp-action="Index">
+                                        <button class="btn btn-danger btn-sm">Админ панель</button>
+                                    </a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-warning" asp-area="" asp-controller="Cart" asp-action="Index"><i>Здравствуй, @User.Identity.Name</i></a>
+                                </li>
+                            }
+                            <li class="nav-item">
+                                <form id="logoutForm" class="form-inline" asp-controller="Account" asp-action="Logout">
+                                    <button id="logout" type="submit" class="nav-link btn btn-link text-dark">Выйти</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" asp-area="" asp-controller="Account" asp-action="Login">Войти</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" asp-area="" asp-controller="Account" asp-action="Register">Зарегистрироваться</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

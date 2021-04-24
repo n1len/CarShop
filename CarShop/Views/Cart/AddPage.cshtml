@@ -1,0 +1,21 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex justify-content-center mt-1 ml-4">
+                        <i>Товар успешно добавлен в корзину</i>
+                    </div>
+                    <div class="d-flex justify-content-center mt-1 ml-4">
+                        <a asp-action="Index" asp-controller="Cart">
+                            <button class="btn btn-danger" type="submit">В корзину</button>
+                        </a>
+                        <a asp-controller="Home" asp-action="Index" type="submit" class="ml-4">
+                            <button class="btn btn-danger">На главную страницу</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

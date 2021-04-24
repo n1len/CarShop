@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using CarShop.Infrastructure;
+using CarShop.Infrastructure.Interfaces;
 
 namespace CarShop.Controllers
 {
@@ -21,12 +22,7 @@ namespace CarShop.Controllers
 
         public IActionResult Index()
         {
-            var homeCars = new HomeViewModel
-            {
-                FavCars = carRepository.getFavoriteCars
-            };
-
-            return View(homeCars);
+            return View();
         }
 
     }

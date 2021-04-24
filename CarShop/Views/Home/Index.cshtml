@@ -1,29 +1,322 @@
 ﻿@model HomeViewModel
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Главная страница";
 }
 
 <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="row">
         <div class="col">
             <div class="card shadow-sm">
                 <div class="card-body">
-                    <h5 class="mt-5 card-text text-center">На данной странице отображаются машины из категории "Favorite".</h5>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="row">
-                            @{
-                                foreach (var car in Model.FavCars)
-                                {
-                                    <div class="col-sm-4 text-center mb-2">
-                                        <h2>@car.Model</h2>
-                                        <p>Цена: @car.Price.ToString("c")</p>
-                                        <a href="@Url.Action("Show", "Car", new {id = car.Id})">
-                                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Подробнее</button>
-                                        </a>
-                                    </div>
-                                }
-                            }
+                    <h5 class="card-text text-center">Категории автомобилей.</h5>
+                    <div>
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBodyType" asp-controller="Car" asp-route-bodyType="Внедорожник">
+                                        <img src="img/auto1.png">
+                                    </a>
+                                    <br/>
+                                    <i>Внедорожник</i>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBodyType" asp-controller="Car" asp-route-bodyType="Седан">
+                                        <img src="img/auto2.png">
+                                    </a>
+                                    <br />
+                                    <i>Седан</i>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBodyType" asp-controller="Car" asp-route-bodyType="Хэтчбек">
+                                        <img src="img/auto3.png">
+                                    </a>
+                                    <br />
+                                    <i>Хэтчбек</i>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBodyType" asp-controller="Car" asp-route-bodyType="Минивэн">
+                                        <img src="img/auto4.png">
+                                    </a>
+                                    <br />
+                                    <i>Минивэн</i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBodyType" asp-controller="Car" asp-route-bodyType="Универсал">
+                                        <img src="img/auto5.png">
+                                    </a>
+                                    <br />
+                                    <i>Универсал</i>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBodyType" asp-controller="Car" asp-route-bodyType="Купе">
+                                        <img src="img/auto6.png">
+                                    </a>
+                                    <br />
+                                    <i>Купе</i>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBodyType" asp-controller="Car" asp-route-bodyType="Кабриолет">
+                                        <img src="img/auto7.png">
+                                    </a>
+                                    <br />
+                                    <i>Кабриолет</i>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBodyType" asp-controller="Car" asp-route-bodyType="Пикап">
+                                        <img src="img/auto8.png">
+                                    </a>
+                                    <br />
+                                    <i>Пикап</i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-text text-center">Популярные марки автомобилей.</h5>
+                    <div>
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Alfa Romeo">
+                                        <i>Alfa Romeo</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Fiat">
+                                        <i>Fiat</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Jaguar">
+                                        <i>Jaguar</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Mercedes-Benz">
+                                        <i>Mercedes-Benz</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Porshe">
+                                        <i>Porshe</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Suzuki">
+                                        <i>Suzuki</i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Audi">
+                                        <i>Audi</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Ford">
+                                        <i>Ford</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Kia">
+                                        <i>Kia</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Mitsubishi">
+                                        <i>Mitsubishi</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Renault">
+                                        <i>Renault</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Toyota">
+                                        <i>Toyota</i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="BMW">
+                                        <i>BMW</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Geely">
+                                        <i>Geely</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Land Rover">
+                                        <i>Land Rover</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Nissan">
+                                        <i>Nissan</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="SEAT">
+                                        <i>SEAT</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Volkswagen">
+                                        <i>Volkswagen</i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Chevrolet">
+                                        <i>Chevrolet</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Honda">
+                                        <i>Honda</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Lexus">
+                                        <i>Lexus</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Opel">
+                                        <i>Opel</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Skoda">
+                                        <i>Skoda</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Volvo">
+                                        <i>Volvo</i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Citroen">
+                                        <i>Citroen</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Hyundai">
+                                        <i>Hyundai</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Mazda">
+                                        <i>Mazda</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Peugeot">
+                                        <i>Peugeot</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Subaru">
+                                        <i>Subaru</i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    <a asp-action="GetCarsByBrand" asp-controller="Car" asp-route-brand="Dodge">
+                                        <i>Dodge</i>
+                                    </a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -31,13 +324,4 @@
         </div>
     </div>
 </div>
-
-
-<footer class="footer">
-    <div class="container">
-        <a href="@Url.Action("Add", "Car")">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Добавить машину</button>
-        </a>
-    </div>
-</footer>
 

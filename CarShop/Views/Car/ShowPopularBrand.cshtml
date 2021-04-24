@@ -1,0 +1,53 @@
+﻿@model CarViewModel
+
+@{
+    ViewBag.Title = ViewBag.Title;
+}
+
+@if (!Model.GetAllCars.Any())
+{
+    <div class="text-center">
+        <b><i>Ничего не было найдено.</i></b>
+    </div>
+    <div class="text-center mt-3">
+        <a asp-controller="Home" asp-action="Index" type="submit">
+            <button class="btn btn-danger">На главную страницу</button>
+        </a>
+    </div>
+}
+else
+{
+    <h4 class="text-center">Автомобили марки: "@ViewBag.Title"</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-center mt-1 ml-4">
+                            <div class="row">
+                                @{
+                                    foreach (var car in Model.GetAllCars)
+                                    {
+                                        <div class="col-sm-auto mt-2 mb-4 ml-sm-2">
+                                            <h5>@car.Brand @car.Model</h5>
+                                            <p>
+                                                @car.BodyType, @car.Year.ToString(), @car.EngineType @car.EngineVolume.ToString("0.0"), @car.Mileage.ToString()км
+                                                <br />
+                                                @car.DriveUnit, @car.GearBox, @car.Color
+                                                <br />
+                                                <strong>@car.Price.ToString("c")</strong>
+                                            </p>
+                                            <a href="@Url.Action("Show", "Car", new {id = car.Id})">
+                                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Подробнее</button>
+                                            </a>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

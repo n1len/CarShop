@@ -1,0 +1,18 @@
+﻿@model CarShop.Infrastructure.Models.Car
+
+@{
+    ViewData["Title"] = "Админ панель";
+    Layout = "_AccountLayout";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    @if (User.Identity.Name == "admin")
+    {
+        <a class="nav-link text-info" asp-area="" asp-controller="Admin" asp-action="Add"><b>Добавить машину</b></a>
+        <br />
+        <a class="nav-link text-info" asp-area="" asp-controller="Car" asp-action="Index"><b>Просмотреть все машины в БД</b></a>
+        <br />
+        <a class="nav-link text-info" asp-area="" asp-controller="Order" asp-action="Show"><b>Просмотреть список заказов</b></a>
+    }
+}

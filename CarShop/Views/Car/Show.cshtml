@@ -1,4 +1,4 @@
-﻿@model CarShop.Infrastructure.Car
+﻿@model CarShop.Infrastructure.Models.Car
 
 @{
     ViewData["Title"] = Model.Brand;
@@ -6,21 +6,91 @@
 
 
 <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h6 class="card-text mt-5 text-center">Подробное описание машины модели "@Model.Model",марки "@Model.Brand"</h6>
-                    <div class="d-flex justify-content-between align-items-center mt-3">
-                        <h5>@Model.Model</h5>
-                        <p>@Model.Brand</p>
-                        <p>@Model.Description</p>
-                        <p>Price:@Model.Price.ToString("c")</p>
-                        <a href="@Url.Action("Delete", "Car", new {id = Model.Id})">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Удалить</button>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div>
+                <h4 class="card-text"><strong>@Model.Brand @Model.Model</strong> @Model.Year</h4>
+                <p>
+                    Цена: @Model.Price.ToString("c")
+                    <a asp-action="Add" asp-controller="Cart" asp-route-id="@Model.Id" class="ml-5">
+                        <button class="btn btn-danger btn-sm" type="submit">Добавить в корзину</button>
+                    </a>
+                </p>
+            </div>
+
+            <h5 class="card-text"><strong>Технические характеристики</strong></h5>
+            <div class="row border-bottom">
+                <div class="col">
+                    <p class="float-left">Марка</p>
+                    <p class="float-right"><i>@Model.Brand</i></p>
+                </div>
+                <div class="col">
+                    <p class="float-left">Модель</p>
+                    <p class="float-right"><i>@Model.Model</i></p>
+                </div>
+            </div>
+            <div class="row border-bottom mt-3">
+                <div class="col">
+                    <p class="float-left">Год</p>
+                    <p class="float-right"><i>@Model.Year.ToString()</i></p>
+                </div>
+                <div class="col">
+                    <p class="float-left">Пробег</p>
+                    <p class="float-right"><i>@Model.Mileage.ToString()км</i></p>
+                </div>
+            </div>
+            <div class="row border-bottom mt-3">
+                <div class="col">
+                    <p class="float-left">Тип двигателя</p>
+                    <p class="float-right"><i>@Model.EngineType</i></p>
+                </div>
+                <div class="col">
+                    <p class="float-left">Объём двигателя</p>
+                    <p class="float-right"><i>@Model.EngineVolume.ToString("0.0")</i></p>
+                </div>
+            </div>
+            <div class="row border-bottom mt-3">
+                <div class="col">
+                    <p class="float-left">Тип кузова</p>
+                    <p class="float-right"><i>@Model.BodyType</i></p>
+                </div>
+                <div class="col">
+                    <p class="float-left">Цвет</p>
+                    <p class="float-right"><i>@Model.Color</i></p>
+                </div>
+            </div>
+            <div class="row border-bottom mt-3">
+                <div class="col">
+                    <p class="float-left">КПП</p>
+                    <p class="float-right"><i>@Model.GearBox</i></p>
+                </div>
+                <div class="col">
+                    <p class="float-left">Привод</p>
+                    <p class="float-right"><i>@Model.DriveUnit</i></p>
+                </div>
+            </div>
+            <h5 class="card-text mt-3">Описание</h5>
+            <div class="row">
+                <div class="col">
+                    <p>@Model.Description</p>
+                </div>
+            </div>
+            @if (User.Identity.IsAuthenticated)
+            {
+                @if (User.Identity.Name == "admin")
+                {
+                    <div class="float-right">
+                        <a href="@Url.Action("Delete", "Admin", new {id = Model.Id})">
+                            <button class="btn btn-danger my-2 my-sm-0" type="submit">Удалить</button>
                         </a>
                     </div>
-                </div>
+                    
+                }
+            }
+            <div class="float-left">
+                <a asp-controller="Home" asp-action="Index" type="submit">
+                    <button class="btn btn-danger">На главную страницу</button>
+                </a>
             </div>
         </div>
     </div>

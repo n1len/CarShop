@@ -1,0 +1,467 @@
+﻿@model IEnumerable<CarShop.Infrastructure.Models.Car>
+
+
+@{
+    ViewData["Title"] = "Результаты поиска";
+    Layout = "_AccountLayout";
+}
+
+<div class="container">
+    <div class="col-md-5 float-right">
+        <section>
+            <form method="post">
+                <h4 class="text-center">Расширенный поиск</h4>
+                <hr />
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label><i>Марка</i></label><br />
+                            <input type="text" class="form-control" name="brand" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label><i>Модель</i></label><br />
+                            <input type="text" class="form-control" name="model" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <select class="form-control" name="yearMin" autocomplete="off">
+                                <option value="" selected="">Год выпуска(с)</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010">2010</option>
+                                <option value="2009">2009</option>
+                                <option value="2008">2008</option>
+                                <option value="2007">2007</option>
+                                <option value="2006">2006</option>
+                                <option value="2005">2005</option>
+                                <option value="2004">2004</option>
+                                <option value="2003">2003</option>
+                                <option value="2002">2002</option>
+                                <option value="2001">2001</option>
+                                <option value="2000">2000</option>
+                                <option value="1999">1999</option>
+                                <option value="1998">1998</option>
+                                <option value="1997">1997</option>
+                                <option value="1996">1996</option>
+                                <option value="1995">1995</option>
+                                <option value="1994">1994</option>
+                                <option value="1993">1993</option>
+                                <option value="1992">1992</option>
+                                <option value="1991">1991</option>
+                                <option value="1990">1990</option>
+                                <option value="1989">1989</option>
+                                <option value="1988">1988</option>
+                                <option value="1987">1987</option>
+                                <option value="1986">1986</option>
+                                <option value="1985">1985</option>
+                                <option value="1984">1984</option>
+                                <option value="1983">1983</option>
+                                <option value="1982">1982</option>
+                                <option value="1981">1981</option>
+                                <option value="1980">1980</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <select class="form-control" name="yearMax" autocomplete="off">
+                                <option value="" selected="">Год выпуска(по)</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010">2010</option>
+                                <option value="2009">2009</option>
+                                <option value="2008">2008</option>
+                                <option value="2007">2007</option>
+                                <option value="2006">2006</option>
+                                <option value="2005">2005</option>
+                                <option value="2004">2004</option>
+                                <option value="2003">2003</option>
+                                <option value="2002">2002</option>
+                                <option value="2001">2001</option>
+                                <option value="2000">2000</option>
+                                <option value="1999">1999</option>
+                                <option value="1998">1998</option>
+                                <option value="1997">1997</option>
+                                <option value="1996">1996</option>
+                                <option value="1995">1995</option>
+                                <option value="1994">1994</option>
+                                <option value="1993">1993</option>
+                                <option value="1992">1992</option>
+                                <option value="1991">1991</option>
+                                <option value="1990">1990</option>
+                                <option value="1989">1989</option>
+                                <option value="1988">1988</option>
+                                <option value="1987">1987</option>
+                                <option value="1986">1986</option>
+                                <option value="1985">1985</option>
+                                <option value="1984">1984</option>
+                                <option value="1983">1983</option>
+                                <option value="1982">1982</option>
+                                <option value="1981">1981</option>
+                                <option value="1980">1980</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <select class="form-control" name="bodyType" autocomplete="off">
+                                <option value="" selected="">Тип кузова</option>
+                                <option value="Внедорожник">Внедорожник</option>
+                                <option value="Седан">Седан</option>
+                                <option value="Хэтчбек">Хэтчбек</option>
+                                <option value="Минивэн">Минивэн</option>
+                                <option value="Универсал">Универсал</option>
+                                <option value="Купе">Купе</option>
+                                <option value="Кабриолет">Кабриолет</option>
+                                <option value="Пикап">Пикап</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <select class="form-control" name="engineType" autocomplete="off">
+                                <option value="" selected="">Тип двигателя</option>
+                                <option value="Бензин">Бензин</option>
+                                <option value="Дизель">Дизель</option>
+                                <option value="Электро">Электро</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <select class="form-control" name="engineVolumeMin" autocomplete="off">
+                                <option value="" selected="">Объём двигателя(от)</option>
+                                <option value="1,0">1,0</option>
+                                <option value="1,5">1,5</option>
+                                <option value="2,0">2,0</option>
+                                <option value="2,5">2,5</option>
+                                <option value="3,0">3,0</option>
+                                <option value="3,5">3,5</option>
+                                <option value="4,0">4,0</option>
+                                <option value="4,5">4,5</option>
+                                <option value="5,0">5,0</option>
+                                <option value="5,5">5,5</option>
+                                <option value="6,0">6,0</option>
+                                <option value="7,0">7,0</option>
+                                <option value="8,0">8,0</option>
+                                <option value="9,0">9,0</option>
+                                <option value="10,0">10,0</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <select class="form-control" name="engineVolumeMax" autocomplete="off">
+                                <option value="" selected="">Объём двигателя(до)</option>
+                                <option value="1,0">1,0</option>
+                                <option value="1,5">1,5</option>
+                                <option value="2,0">2,0</option>
+                                <option value="2,5">2,5</option>
+                                <option value="3,0">3,0</option>
+                                <option value="3,5">3,5</option>
+                                <option value="4,0">4,0</option>
+                                <option value="4,5">4,5</option>
+                                <option value="5,0">5,0</option>
+                                <option value="5,5">5,5</option>
+                                <option value="6,0">6,0</option>
+                                <option value="7,0">7,0</option>
+                                <option value="8,0">8,0</option>
+                                <option value="9,0">9,0</option>
+                                <option value="10,0">10,0</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <select class="form-control" name="priceMin" autocomplete="off">
+                                <option value="" selected="">Цена(от)</option>
+                                <option value="10000">10 000₽</option>
+                                <option value="20000">20 000₽</option>
+                                <option value="30000">30 000₽</option>
+                                <option value="40000">40 000₽</option>
+                                <option value="50000">50 000₽</option>
+                                <option value="60000">60 000₽</option>
+                                <option value="70000">70 000₽</option>
+                                <option value="80000">80 000₽</option>
+                                <option value="90000">90 000₽</option>
+                                <option value="100000">100 000₽</option>
+                                <option value="110000">110 000₽</option>
+                                <option value="120000">120 000₽</option>
+                                <option value="130000">130 000₽</option>
+                                <option value="140000">140 000₽</option>
+                                <option value="150000">150 000₽</option>
+                                <option value="160000">160 000₽</option>
+                                <option value="170000">170 000₽</option>
+                                <option value="180000">180 000₽</option>
+                                <option value="190000">190 000₽</option>
+                                <option value="200000">200 000₽</option>
+                                <option value="210000">210 000₽</option>
+                                <option value="220000">220 000₽</option>
+                                <option value="230000">230 000₽</option>
+                                <option value="240000">240 000₽</option>
+                                <option value="250000">250 000₽</option>
+                                <option value="260000">260 000₽</option>
+                                <option value="270000">270 000₽</option>
+                                <option value="280000">280 000₽</option>
+                                <option value="290000">290 000₽</option>
+                                <option value="300000">300 000₽</option>
+                                <option value="350000">350 000₽</option>
+                                <option value="400000">400 000₽</option>
+                                <option value="450000">450 000₽</option>
+                                <option value="500000">500 000₽</option>
+                                <option value="550000">550 000₽</option>
+                                <option value="600000">600 000₽</option>
+                                <option value="650000">650 000₽</option>
+                                <option value="700000">700 000₽</option>
+                                <option value="750000">750 000₽</option>
+                                <option value="800000">800 000₽</option>
+                                <option value="850000">850 000₽</option>
+                                <option value="900000">900 000₽</option>
+                                <option value="950000">950 000₽</option>
+                                <option value="1000000">1 000 000₽</option>
+                                <option value="1100000">1 100 000₽</option>
+                                <option value="1200000">1 200 000₽</option>
+                                <option value="1300000">1 300 000₽</option>
+                                <option value="1400000">1 400 000₽</option>
+                                <option value="1500000">1 500 000₽</option>
+                                <option value="1600000">1 600 000₽</option>
+                                <option value="1700000">1 700 000₽</option>
+                                <option value="1800000">1 800 000₽</option>
+                                <option value="1900000">1 900 000₽</option>
+                                <option value="2000000">2 000 000₽</option>
+                                <option value="2100000">2 100 000₽</option>
+                                <option value="2200000">2 200 000₽</option>
+                                <option value="2300000">2 300 000₽</option>
+                                <option value="2400000">2 400 000₽</option>
+                                <option value="2500000">2 500 000₽</option>
+                                <option value="2600000">2 600 000₽</option>
+                                <option value="2700000">2 700 000₽</option>
+                                <option value="2800000">2 800 000₽</option>
+                                <option value="2900000">2 900 000₽</option>
+                                <option value="3000000">3 000 000₽</option>
+                                <option value="3500000">3 500 000₽</option>
+                                <option value="4000000">4 000 000₽</option>
+                                <option value="4500000">4 500 000₽</option>
+                                <option value="5000000">5 000 000₽</option>
+                                <option value="5500000">5 500 000₽</option>
+                                <option value="6000000">6 000 000₽</option>
+                                <option value="6500000">6 500 000₽</option>
+                                <option value="7000000">7 000 000₽</option>
+                                <option value="7500000">7 500 000₽</option>
+                                <option value="8000000">8 000 000₽</option>
+                                <option value="8500000">8 500 000₽</option>
+                                <option value="9000000">9 000 000₽</option>
+                                <option value="9500000">9 500 000₽</option>
+                                <option value="10000000">10 000 000₽</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <select class="form-control" name="priceMax" autocomplete="off">
+                                <option value="" selected="">Цена(до)</option>
+                                <option value="10000">10 000₽</option>
+                                <option value="20000">20 000₽</option>
+                                <option value="30000">30 000₽</option>
+                                <option value="40000">40 000₽</option>
+                                <option value="50000">50 000₽</option>
+                                <option value="60000">60 000₽</option>
+                                <option value="70000">70 000₽</option>
+                                <option value="80000">80 000₽</option>
+                                <option value="90000">90 000₽</option>
+                                <option value="100000">100 000₽</option>
+                                <option value="110000">110 000₽</option>
+                                <option value="120000">120 000₽</option>
+                                <option value="130000">130 000₽</option>
+                                <option value="140000">140 000₽</option>
+                                <option value="150000">150 000₽</option>
+                                <option value="160000">160 000₽</option>
+                                <option value="170000">170 000₽</option>
+                                <option value="180000">180 000₽</option>
+                                <option value="190000">190 000₽</option>
+                                <option value="200000">200 000₽</option>
+                                <option value="210000">210 000₽</option>
+                                <option value="220000">220 000₽</option>
+                                <option value="230000">230 000₽</option>
+                                <option value="240000">240 000₽</option>
+                                <option value="250000">250 000₽</option>
+                                <option value="260000">260 000₽</option>
+                                <option value="270000">270 000₽</option>
+                                <option value="280000">280 000₽</option>
+                                <option value="290000">290 000₽</option>
+                                <option value="300000">300 000₽</option>
+                                <option value="350000">350 000₽</option>
+                                <option value="400000">400 000₽</option>
+                                <option value="450000">450 000₽</option>
+                                <option value="500000">500 000₽</option>
+                                <option value="550000">550 000₽</option>
+                                <option value="600000">600 000₽</option>
+                                <option value="650000">650 000₽</option>
+                                <option value="700000">700 000₽</option>
+                                <option value="750000">750 000₽</option>
+                                <option value="800000">800 000₽</option>
+                                <option value="850000">850 000₽</option>
+                                <option value="900000">900 000₽</option>
+                                <option value="950000">950 000₽</option>
+                                <option value="1000000">1 000 000₽</option>
+                                <option value="1100000">1 100 000₽</option>
+                                <option value="1200000">1 200 000₽</option>
+                                <option value="1300000">1 300 000₽</option>
+                                <option value="1400000">1 400 000₽</option>
+                                <option value="1500000">1 500 000₽</option>
+                                <option value="1600000">1 600 000₽</option>
+                                <option value="1700000">1 700 000₽</option>
+                                <option value="1800000">1 800 000₽</option>
+                                <option value="1900000">1 900 000₽</option>
+                                <option value="2000000">2 000 000₽</option>
+                                <option value="2100000">2 100 000₽</option>
+                                <option value="2200000">2 200 000₽</option>
+                                <option value="2300000">2 300 000₽</option>
+                                <option value="2400000">2 400 000₽</option>
+                                <option value="2500000">2 500 000₽</option>
+                                <option value="2600000">2 600 000₽</option>
+                                <option value="2700000">2 700 000₽</option>
+                                <option value="2800000">2 800 000₽</option>
+                                <option value="2900000">2 900 000₽</option>
+                                <option value="3000000">3 000 000₽</option>
+                                <option value="3500000">3 500 000₽</option>
+                                <option value="4000000">4 000 000₽</option>
+                                <option value="4500000">4 500 000₽</option>
+                                <option value="5000000">5 000 000₽</option>
+                                <option value="5500000">5 500 000₽</option>
+                                <option value="6000000">6 000 000₽</option>
+                                <option value="6500000">6 500 000₽</option>
+                                <option value="7000000">7 000 000₽</option>
+                                <option value="7500000">7 500 000₽</option>
+                                <option value="8000000">8 000 000₽</option>
+                                <option value="8500000">8 500 000₽</option>
+                                <option value="9000000">9 000 000₽</option>
+                                <option value="9500000">9 500 000₽</option>
+                                <option value="10000000">10 000 000₽</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <select class="form-control" name="mileageMax" autocomplete="off">
+                                <option value="" selected="">Пробег(до)</option>
+                                <option value="10000">до 10 тыс.</option>
+                                <option value="20000">до 20 тыс.</option>
+                                <option value="30000">до 30 тыс.</option>
+                                <option value="40000">до 40 тыс.</option>
+                                <option value="50000">до 50 тыс.</option>
+                                <option value="60000">до 60 тыс.</option>
+                                <option value="70000">до 70 тыс.</option>
+                                <option value="80000">до 80 тыс.</option>
+                                <option value="90000">до 90 тыс.</option>
+                                <option value="100000">до 100 тыс.</option>
+                                <option value="110000">до 110 тыс.</option>
+                                <option value="120000">до 120 тыс.</option>
+                                <option value="130000">до 130 тыс.</option>
+                                <option value="140000">до 140 тыс.</option>
+                                <option value="150000">до 150 тыс.</option>
+                                <option value="160000">до 160 тыс.</option>
+                                <option value="170000">до 170 тыс.</option>
+                                <option value="180000">до 180 тыс.</option>
+                                <option value="190000">до 190 тыс.</option>
+                                <option value="200000">до 200 тыс.</option>
+                                <option value="210000">до 210 тыс.</option>
+                                <option value="220000">до 220 тыс.</option>
+                                <option value="230000">до 230 тыс</option>
+                                <option value="240000">до 240 тыс.</option>
+                                <option value="250000">до 250 тыс.</option>
+                                <option value="260000">до 260 тыс.</option>
+                                <option value="270000">до 270 тыс.</option>
+                                <option value="280000">до 280 тыс.</option>
+                                <option value="290000">до 290 тыс.</option>
+                                <option value="300000">до 300 тыс.</option>
+                                <option value="350000">до 350 тыс.</option>
+                                <option value="400000">до 400 тыс.</option>
+                                <option value="450000">до 450 тыс.</option>
+                                <option value="500000">до 500 тыс.</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="col">
+                        <button class="btn btn-danger" type="submit" asp-controller="Search" asp-action="AdvancedSearch">Сортировать</button>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+@if (!Model.Any())
+{
+    <div class="text-center">
+        <b><i>Введите данные для расширенного поиска.</i></b>
+    </div>
+}
+else
+{
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex justify-content-center mt-1 ml-4">
+                        <div class="row">
+                            @{
+                                foreach (var car in Model)
+                                {
+                                    <div class="col-sm-auto mt-2 mb-4">
+                                        <h5>@car.Brand @car.Model</h5>
+                                        <p>
+                                            @car.BodyType, @car.Year.ToString(), @car.EngineType @car.EngineVolume.ToString("0.0"), @car.Mileage.ToString()км
+                                            <br />
+                                            @car.DriveUnit, @car.GearBox, @car.Color
+                                            <br />
+                                            <strong>@car.Price.ToString("c")</strong>
+                                        </p>
+                                        <a href="@Url.Action("Show", "Car", new {id = car.Id})">
+                                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Подробнее</button>
+                                        </a>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}

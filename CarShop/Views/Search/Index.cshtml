@@ -1,28 +1,59 @@
-﻿@model IEnumerable<CarShop.Infrastructure.Car>
+﻿@model IEnumerable<CarShop.Infrastructure.Models.Car>
 
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Результаты поиска";
+    Layout = "_AccountLayout";
 }
-
-<h1>Results</h1>
 
 @if (!Model.Any())
 {
-    <p>Nothing found.</p>
+    <div class="text-center">
+        <b><i>По Вашему запросу ничего не найдено.</i></b>
+    </div>
+    <div class="text-center mt-2">
+        <a asp-controller="Search" asp-action="AdvancedSearch" type="submit">
+            <button class="btn btn-danger">В расширеный поиск</button>
+        </a>
+    </div>
 }
 else
 {
-    <ul>
-        @foreach (var car in Model)
-        {
-            <li class="mb-2 mt-4">
-                <a href="@Url.Action("Show", "Car", new {id = car.Id})">
-                    <button class="btn btn-warning my-2 my-sm-0" type="submit">@car.Brand | @car.Model</button>
-                </a>
-            </li>
-        }
-    </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-center mt-1 ml-4">
+                            <div class="row">
+                                @{
+                                    foreach (var car in Model)
+                                    {
+                                        <div class="col-sm-auto mt-2 mb-4 ml-sm-2">
+                                            <h5>@car.Brand @car.Model</h5>
+                                            <p>
+                                                @car.BodyType, @car.Year.ToString(), @car.EngineType @car.EngineVolume.ToString("0.0"), @car.Mileage.ToString()км
+                                                <br />
+                                                @car.DriveUnit, @car.GearBox, @car.Color
+                                                <br />
+                                                <strong>@car.Price.ToString("c")</strong>
+                                            </p>
+                                            <a href="@Url.Action("Show", "Car", new {id = car.Id})">
+                                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Подробнее</button>
+                                            </a>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <a asp-controller="Search" asp-action="AdvancedSearch" type="submit">
+            <button class="btn btn-danger">В расширеный поиск</button>
+        </a>
+    </div>
 }
-
-

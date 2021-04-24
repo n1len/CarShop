@@ -10,8 +10,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using CarShop.Data;
 using CarShop.Infrastructure;
-using CarShop.Infrastructure.Repository;
+using CarShop.Infrastructure.Interfaces;
+using CarShop.Infrastructure.Models;
+using CarShop.Infrastructure.Repositories;
 using CarShop.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarShop
@@ -37,11 +41,25 @@ namespace CarShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<SearchCarViewModel>();
+            services.AddTransient<ICartRepository,CartRepository>();
             services.AddTransient<ICarRepository, CarRepository>();
-            services.AddTransient<ICategoryRepository,CategoryRepository>();
+            services.AddTransient<IOrderRepository,OrderRepository>();
+            services.AddTransient<IOrderDetailRepository,OrderDetailRepository>();
             services.AddDbContext<AppDBContent>(option => option.UseSqlServer(configurationRoot.GetConnectionString("DefaultConnection")));
+            services.AddIdentity<User, IdentityRole>(options =>
+                    {
+                        options.Password.RequireLowercase = false;
+                        options.Password.RequireUppercase = false;
+                        options.Password.RequireDigit = false;
+                        options.Password.RequireNonAlphanumeric = false;
+                    })
+                .AddEntityFrameworkStores<AppDBContent>();
             services.AddControllersWithViews();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sp => CartRepository.GetCart(sp));
             services.AddMvc();
+            services.AddMemoryCache();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,9 +72,11 @@ namespace CarShop
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseStatusCodePages();
+            app.UseSession();
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -65,11 +85,6 @@ namespace CarShop
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
-
-
-            using var scope = app.ApplicationServices.CreateScope();
-            AppDBContent content = scope.ServiceProvider.GetRequiredService<AppDBContent>();
-            DbObjects.Initial(content);
         }
     }
 }

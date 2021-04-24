@@ -1,0 +1,72 @@
+﻿@model CarShop.Infrastructure.Models.Order
+
+@{
+    ViewData["Title"] = "Оплата";
+    Layout = "_AccountLayout";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="container d-flex justify-content-center">
+        <div class="col-md-6">
+            <section>
+                <form method="post" asp-action="Payment">
+                    <h4 class="text-center">Окно оплаты</h4>
+                    <hr />
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label asp-for="FirstName"></label><br />
+                                <input asp-for="FirstName" class="form-control" />
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label asp-for="LastName"></label><br />
+                                <input asp-for="LastName" class="form-control" />
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label asp-for="Email"></label><br />
+                                <input asp-for="Email" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label asp-for="Address"></label><br />
+                                <input asp-for="Address" class="form-control" />
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="col text-left">
+                            <button class="btn btn-danger" type="submit">Оформить заказ</button>
+                        </p>
+                        <p class="col text-right">
+                            <button class="btn btn-danger" asp-controller="Home" asp-action="Index">На главную</button>
+                        </p>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+}
+else
+{
+    <div class="text-center">
+        <b><i>Оплата доступна только авторизованным пользователям.</i></b>
+    </div>
+    <div class="text-center mt-3">
+        <p>
+            <a asp-controller="Account" asp-action="Login">Уже зарегистрированы? Авторизоваться.</a>
+        </p>
+    </div>
+}

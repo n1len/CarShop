@@ -1,0 +1,52 @@
+﻿@model OrderDetailViewModel
+
+@{
+    ViewData["Title"] = "Все заказы";
+    Layout = "_AccountLayout";
+}
+
+<div class="container">
+    <h5 class="card-text text-center"><strong>Описание заказа</strong></h5>
+    <div class="row">
+        <div class="col">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex justify-content-center mt-1 ml-4">
+                        <div class="row">
+                            @{
+                                foreach (var car in Model.GetAllOrderDetails)
+                                {
+                                    <div class="col-sm-auto mt-2 mb-4 ml-sm-2 card shadow-sm">
+                                        <p>
+                                            <i>Цена авто</i>
+                                            <br/>
+                                            <i>@car.Price.ToString("c")</i>
+                                        </p>
+                                        <div class="mt-3">
+                                            <a href="@Url.Action("Show", "Car", new {id = car.CarId})">
+                                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Информация о машине</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="float-left">
+                        <a asp-controller="Home" asp-action="Index" type="submit">
+                            <button class="btn btn-danger">На главную страницу</button>
+                        </a>
+                    </div>
+                    <div class="float-right">
+                        @{
+                            var item = Model.OrderId;
+                            <a href="@Url.Action("DeleteOrder", "Order", new {id = item})">
+                                <button class="btn btn-danger" type="submit">Удалить заказ</button>
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+﻿@model CartViewModel
+
+@{
+    ViewData["Title"] = "Корзина";
+    Layout = "_AccountLayout";
+}
+
+<div class="container">
+    @foreach (var el in Model.CartRepository.Carts)
+    {
+        <div class="alert alert-warning">
+            <b>Автомобиль: </b> @el.MyCar.Brand @el.MyCar.Model <br />
+            <b>Цена: </b> @el.MyCar.Price.ToString("c")
+            <br />
+            <a asp-action="Delete" asp-controller="Cart" asp-route-id="@Model.CartRepository.CartId">
+                <button class="btn btn-danger btn-sm mt-2" type="submit">Удалить</button>
+            </a>
+        </div>
+    }
+    <br />
+    @if (!Model.CartRepository.Carts.Any())
+    {
+        <div class="text-center">
+            <b><i>Корзина пуста.</i></b>
+        </div>
+        <div class="text-center mt-3">
+            <a asp-controller="Home" asp-action="Index" type="submit">
+                <button class="btn btn-danger">На главную страницу</button>
+            </a>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col">
+                <a asp-controller="Order" asp-action="Payment" type="submit">
+                    <button class="btn btn-danger">Оплатить</button>
+                </a>
+            </div>
+            <div class="col">
+                <a asp-controller="Home" asp-action="Index" type="submit" class="float-right">
+                    <button class="btn btn-danger">На главную страницу</button>
+                </a>
+            </div>
+        </div>
+    }
+</div>
