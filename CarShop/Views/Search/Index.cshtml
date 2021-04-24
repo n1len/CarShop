@@ -1,0 +1,28 @@
+﻿@model IEnumerable<CarShop.Infrastructure.Car>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Results</h1>
+
+@if (!Model.Any())
+{
+    <p>Nothing found.</p>
+}
+else
+{
+    <ul>
+        @foreach (var car in Model)
+        {
+            <li class="mb-2 mt-4">
+                <a href="@Url.Action("Show", "Car", new {id = car.Id})">
+                    <button class="btn btn-warning my-2 my-sm-0" type="submit">@car.Brand | @car.Model</button>
+                </a>
+            </li>
+        }
+    </ul>
+}
+
+
