@@ -37,6 +37,18 @@ namespace CarShop.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Add(Car car)
+        {
+            if (ModelState.IsValid)
+            {
+                DbObjects.Add(appDbContent, car);
+
+                return RedirectToAction("AddSuccess");
+            }
+            return View(car);
+        }
+
         public IActionResult Delete(int id)
         {
             if (iCartRepository.GetCarById(id) != null)
@@ -59,10 +71,8 @@ namespace CarShop.Controllers
             return View();
         }
 
-        public IActionResult AddSuccess(Car car)
+        public IActionResult AddSuccess()
         {
-            DbObjects.Add(appDbContent, car);
-
             return View();
         }
 

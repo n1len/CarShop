@@ -150,14 +150,8 @@ D:\Everything for work\My projects\CarShop\CarShop\bin\Debug\netcoreapp3.1\tr\Mi
 D:\Everything for work\My projects\CarShop\CarShop\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Everything for work\My projects\CarShop\CarShop\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Car\Index.cshtml.g.cs
-D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Car\Electro.cshtml.g.cs
-D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Car\Fuel.cshtml.g.cs
 D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Search\Index.cshtml.g.cs
 D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Car\Show.cshtml.g.cs
-D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Car\Delete.cshtml.g.cs
-D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Car\Add.cshtml.g.cs
-D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Car\Diesel.cshtml.g.cs
-D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Car\Petrol.cshtml.g.cs
 D:\Everything for work\My projects\111\CarShop\CarShop\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Everything for work\My projects\111\CarShop\CarShop\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Everything for work\My projects\111\CarShop\CarShop\bin\Debug\netcoreapp3.1\dbsetting.json
@@ -336,3 +330,205 @@ D:\Everything for work\My projects\111\CarShop\CarShop\obj\Debug\netcoreapp3.1\R
 D:\Everything for work\My projects\111\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Car\ShowByBodyType.cshtml.g.cs
 D:\Everything for work\My projects\111\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ErrorMessage.cshtml.g.cs
 D:\Everything for work\My projects\111\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ErrorMessageCart.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Everything for work\My projects\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Everything for work\My projects\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Everything for work\My projects\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\Everything for work\My projects\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Add.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\AddSuccess.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Delete.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ErrorMessage.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ErrorMessageCart.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Cart\AddPage.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Car\ShowByBodyType.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Car\ShowPopularBrand.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Order\Complete.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Order\DeleteOrder.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Order\Payment.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Order\Show.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Order\ShowDetail.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Search\AdvancedSearch.cshtml.g.cs
+D:\Everything for work\My projects\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_AccountLayout.cshtml.g.cs
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\dbsetting.json
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\CarShop.exe
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\CarShop.deps.json
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\CarShop.runtimeconfig.json
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\CarShop.runtimeconfig.dev.json
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\CarShop.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\CarShop.pdb
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\CarShop.Views.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\CarShop.Views.pdb
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Json.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Git\CarShop\CarShop\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.csprojAssemblyReference.cache
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.AssemblyInfoInputs.cache
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.AssemblyInfo.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.csproj.CoreCompileInputs.cache
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.MvcApplicationPartsAssemblyInfo.cache
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.RazorAssemblyInfo.cache
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.RazorAssemblyInfo.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\staticwebassets\CarShop.StaticWebAssets.Manifest.cache
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\staticwebassets\CarShop.StaticWebAssets.xml
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\scopedcss\bundle\CarShop.styles.css
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.TagHelpers.input.cache
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.TagHelpers.output.cache
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.RazorCoreGenerate.cache
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Add.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\AddSuccess.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Delete.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ErrorMessage.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ErrorMessageCart.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Cart\AddPage.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Car\Index.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Car\Show.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Car\ShowByBodyType.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Car\ShowPopularBrand.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Order\Complete.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Order\DeleteOrder.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Order\Payment.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Order\Show.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Order\ShowDetail.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Search\AdvancedSearch.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Search\Index.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_AccountLayout.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.RazorTargetAssemblyInfo.cache
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.RazorTargetAssemblyInfo.cs
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.Views.pdb
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.csproj.CopyComplete
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.dll
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.pdb
+C:\Git\CarShop\CarShop\obj\Debug\netcoreapp3.1\CarShop.genruntimeconfig.cache

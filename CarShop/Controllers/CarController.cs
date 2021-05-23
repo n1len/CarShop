@@ -36,7 +36,7 @@ namespace CarShop.Controllers
 
         public ViewResult Index(string category)
         {
-            IEnumerable<Car> cars = null;
+            IEnumerable<Car> cars;
             cars = carRepository.Cars;
 
             var car = new CarViewModel
@@ -58,7 +58,7 @@ namespace CarShop.Controllers
         {
             ViewBag.Title = brand;
 
-            IEnumerable<Car> cars = null;
+            IEnumerable<Car> cars;
 
             cars = carRepository.Cars.Where(i => i.Brand.Equals(brand))
                 .OrderBy(i => i.Id);
@@ -75,7 +75,7 @@ namespace CarShop.Controllers
         {
             ViewBag.Title = bodyType;
 
-            IEnumerable<Car> cars = null;
+            IEnumerable<Car> cars;
 
             cars = carRepository.Cars.Where(i => i.BodyType.Equals(bodyType))
                 .OrderBy(i => i.Id);

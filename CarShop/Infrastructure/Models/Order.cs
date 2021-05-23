@@ -12,12 +12,12 @@ namespace CarShop.Infrastructure.Models
 
         [Required(ErrorMessage = "Поле не может быть пустым.")]
         [Display(Name = "Имя покупателя")]
-        [StringLength(20, ErrorMessage = "{0} должно быть от {2} до {1} символов длинной.",MinimumLength = 2)]
+        [RegularExpression(@"^[А-Яа-яёЁ]{2,20}$", ErrorMessage = "В поле имя покупателя можно использовать только кирилицу и длина поля должна быть от 2 до 20 символов")]
         public string FirstName { get; set; }
 
         [Required(ErrorMessage = "Поле не может быть пустым.")]
         [Display(Name = "Фамилия покупателя")]
-        [StringLength(20, ErrorMessage = "{0} должна быть от {2} до {1} символов длинной.", MinimumLength = 2)]
+        [RegularExpression(@"^[А-Яа-яёЁ]{2,20}$", ErrorMessage = "В поле фамилия покупателя можно использовать только кирилицу и длина поля должна быть от 2 до 20 символов")]
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "Поле не может быть пустым.")]
@@ -29,6 +29,7 @@ namespace CarShop.Infrastructure.Models
         [Required(ErrorMessage = "Поле не может быть пустым.")]
         [Display(Name = "Адрес")]
         [StringLength(100, ErrorMessage = "{0} должен быть от {2} до {1} символов длинной.", MinimumLength = 5)]
+        [RegularExpression(@"^[А-Яа-яёЁa-zA-Z\s.,-\\]{5,100}$", ErrorMessage = "Поле адрес должно быть от 5 до 100 символов длиной")]
         public string Address { get; set; }
 
         [BindNever]
