@@ -37,7 +37,7 @@ namespace CarShop.Infrastructure.Models
 
         [Required(ErrorMessage = "Поле марка не может быть пустым.")]
         [Display(Name = "Марка")]
-        [RegularExpression(@"^[А-Яа-яёЁA-Za-z0-9\s]{2,20}$", ErrorMessage = "В поле модель можно использовать кирилицу,латиницу,цифры и длина поля должна быть от 2 до 20 символов")]
+        [RegularExpression(@"^[А-Яа-яёЁA-Za-z\s]{2,20}$", ErrorMessage = "В поле марка можно использовать кирилицу,латиницу и длина поля должна быть от 2 до 20 символов")]
         public string Brand { get; set; }
 
         
