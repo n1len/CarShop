@@ -15,7 +15,7 @@ namespace CarShop.Infrastructure.Models
 
         [Required(ErrorMessage = "Поле описание не может быть пустым.")]
         [Display(Name = "Описание")]
-        [RegularExpression(@"^[А-Яа-яёЁA-Za-z0-9\s,.\\-_:]{2,300}$", ErrorMessage = "В поле модель можно использовать кирилицу,латиницу,цифры и длина поля должна быть от 2 до 300 символов")]
+        [RegularExpression(@"^[А-Яа-яёЁA-Za-z0-9\s,.\\-_:]{2,300}$", ErrorMessage = "В поле описание можно использовать кирилицу,латиницу,цифры и длина поля должна быть от 2 до 300 символов")]
         public string Description { get; set; }
 
         [Required(ErrorMessage = "Поле пробег не может быть пустым")]
